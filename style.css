@@ -1,0 +1,18 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juka Comfort</title>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Righteous&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Paste all the CSS here */
+    body {
+      font-family: 'Josefin Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FDF1F7;
+      color: #2E2E2E;
+    }
+    /* ... rest of the CSS ... */
+  </style>
+</head>
