@@ -1,18 +1,133 @@
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Juka Comfort</title>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Righteous&display=swap" rel="stylesheet">
-  
-  <style>
-    /* Paste all the CSS here */
-    body {
-      font-family: 'Josefin Sans', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #FDF1F7;
-      color: #2E2E2E;
-    }
-    /* ... rest of the CSS ... */
-  </style>
-</head>
+/* General */
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FDF1F7;
+  color: #2E2E2E;
+}
+
+/* Hero Section */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #FDEAF0, #FFDDEE);
+}
+
+.hero-content h1 {
+  font-family: 'Righteous', cursive;
+  font-size: 60px;
+  color: #D96CA9;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 22px;
+  margin-bottom: 25px;
+  max-width: 600px;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  background-color: #FFC0DC;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+  margin-top: 30px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background-color: #C13B7A;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #E887C4;
+  transform: translateY(-2px);
+}
+
+/* Features Section */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 36px;
+  color: #D96CA9;
+  margin-bottom: 50px;
+}
+
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.feature {
+  background-color: #FFE6F0;
+  padding: 25px;
+  border-radius: 20px;
+  width: 270px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature h3 {
+  margin-top: 20px;
+  color: #C13B7A;
+}
+
+.image-placeholder {
+  background-color: #FFC0DC;
+  height: 160px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Shop Section */
+#shop {
+  background-color: #FDEAF0;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#shop p {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px;
+  background-color: #FDF1F7;
+  color: #2E2E2E;
+  font-size: 16px;
+}
