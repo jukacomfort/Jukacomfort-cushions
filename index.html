@@ -4,51 +4,105 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Juka Comfort</title>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Righteous&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* --- Fonts --- */
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Righteous&display=swap');
+
+    /* --- Global Styles --- */
+    body {
+      font-family: 'Josefin Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fce4f5; /* soft pink background */
+      color: #4d2e4f; /* dark purple text for contrast */
+    }
+
+    h1, h2, h3 {
+      font-family: 'Righteous', cursive;
+      color: #b66bbf; /* brighter pink/purple */
+      margin: 0.5em 0;
+    }
+
+    p {
+      line-height: 1.6;
+      margin: 0.5em 0;
+    }
+
+    /* --- Container --- */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* --- Buttons --- */
+    .btn {
+      background-color: #f4cafb;
+      border: none;
+      color: #4d2e4f;
+      padding: 10px 20px;
+      margin: 10px 0;
+      cursor: pointer;
+      font-size: 1em;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e89cf5;
+    }
+
+    /* --- Images --- */
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin: 10px 0;
+    }
+
+    /* --- Sections --- */
+    section {
+      background-color: #fde8f9; 
+      padding: 40px 20px;
+      margin: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* --- Footer --- */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f4cafb;
+      color: #4d2e4f;
+      border-top: 2px solid #b66bbf;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <h1>Juka Comfort</h1>
+      <p>Transform your Pilates workout with our shoulder block cushions</p>
+    </header>
 
-  <!-- Hero Section -->
-  <header>
-    <h1>Juka Comfort</h1>
-    <p>Enhance your Pilates experience with comfort & support</p>
-    <a href="#shop" class="btn">Shop Now</a>
-    <div class="hero-image">[Hero Image Here]</div>
-  </header>
+    <section>
+      <h2>Comfort & Support</h2>
+      <p>Our specially designed cushions relieve shoulder strain, making your workout safer and more enjoyable.</p>
+      <img src="https://via.placeholder.com/800x400.png?text=Shoulder+Block+Cushion" alt="Shoulder block cushion">
+      <button class="btn">Shop Now</button>
+    </section>
 
-  <!-- Features Section -->
-  <section id="features">
-    <h2>Why You'll Love Our Shoulder Blocks</h2>
-    <div class="feature-grid">
-      <div class="feature">
-        <div class="image-placeholder">[Image]</div>
-        <h3>Reduces Shoulder Pain</h3>
-        <p>Supports proper alignment to relieve discomfort during workouts.</p>
-      </div>
-      <div class="feature">
-        <div class="image-placeholder">[Image]</div>
-        <h3>Improves Posture</h3>
-        <p>Encourages correct form for better results and fewer injuries.</p>
-      </div>
-      <div class="feature">
-        <div class="image-placeholder">[Image]</div>
-        <h3>Comfortable & Durable</h3>
-        <p>High-quality cushions that last and feel great during use.</p>
-      </div>
-    </div>
-  </section>
+    <section>
+      <h2>Enhance Your Pilates Experience</h2>
+      <p>Whether you are a beginner or advanced, our cushions provide the stability you need to improve your form.</p>
+      <img src="https://via.placeholder.com/800x400.png?text=Pilates+Workout+with+Cushions" alt="Pilates workout">
+      <button class="btn">Learn More</button>
+    </section>
 
-  <!-- Shop Section -->
-  <section id="shop">
-    <h2>Get Your Shoulder Block Today</h2>
-    <a href="#" class="btn">Buy Now</a>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Juka Comfort
-  </footer>
-
+    <footer>
+      &copy; 2025 Juka Comfort | Designed with care
+    </footer>
+  </div>
 </body>
 </html>
