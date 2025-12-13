@@ -1,108 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Juka Comfort</title>
+
+  <!-- Simple, close-to-GoDaddy vibe: clean + geometric-ish -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    /* --- Fonts --- */
-    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Righteous&display=swap');
-
-    /* --- Global Styles --- */
-    body {
-      font-family: 'Josefin Sans', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fce4f5; /* soft pink background */
-      color: #4d2e4f; /* dark purple text for contrast */
+    :root{
+      --purple:#8a4aa3;
+      --purple-soft:#f2c9ff;   /* hero right panel */
+      --text:#111;
+      --muted:#444;
+      --bg:#ffffff;
+      --max:1200px;
     }
 
-    h1, h2, h3 {
-      font-family: 'Righteous', cursive;
-      color: #b66bbf; /* brighter pink/purple */
-      margin: 0.5em 0;
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family:"Josefin Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
     }
 
-    p {
-      line-height: 1.6;
-      margin: 0.5em 0;
+    /* Top nav */
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:#fff;
+      border-bottom:1px solid rgba(0,0,0,.06);
+    }
+    .nav-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:18px 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+    .brand{
+      font-weight:700;
+      letter-spacing:.25em;
+      color:var(--purple);
+      text-transform:uppercase;
+      font-size:16px;
+      white-space:nowrap;
+    }
+    .nav-right{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      font-size:14px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .nav-right a{
+      color:#111;
+      text-decoration:none;
+      padding:6px 2px;
+      border-bottom:2px solid transparent;
+    }
+    .nav-right a.active{
+      border-bottom-color: #d26cff; /* the underline vibe */
+    }
+    .icons{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-left:6px;
+    }
+    .icon{
+      width:18px;
+      height:18px;
+      display:inline-block;
+    }
+    .icon svg{ width:18px; height:18px; display:block; fill:#111; }
+
+    /* Hero split */
+    .hero{
+      width:100%;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      min-height:420px;
+    }
+    .hero-left{
+      background:#ddd;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-left img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .hero-right{
+      background:var(--purple-soft);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px 26px;
+      text-align:center;
+    }
+    .hero-card{
+      max-width:520px;
+    }
+    .hero-title{
+      margin:0 0 12px 0;
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-size:44px;
+      line-height:1.1;
+      color:#000;
+    }
+    .hero-sub{
+      margin:0;
+      font-size:16px;
+      letter-spacing:.08em;
+      color:#111;
+      text-transform:lowercase;
     }
 
-    /* --- Container --- */
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
+    /* Sections */
+    .section{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:64px 22px;
+    }
+    .split{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:48px;
+      align-items:center;
+    }
+    .split .imgbox{
+      background:#eee;
+      overflow:hidden;
+      border-radius:2px; /* GoDaddy looked square-ish */
+      box-shadow:0 8px 24px rgba(0,0,0,.10);
+    }
+    .split .imgbox img{
+      width:100%;
+      height:100%;
+      max-height:320px;
+      object-fit:cover;
+      display:block;
     }
 
-    /* --- Buttons --- */
-    .btn {
-      background-color: #f4cafb;
-      border: none;
-      color: #4d2e4f;
-      padding: 10px 20px;
-      margin: 10px 0;
-      cursor: pointer;
-      font-size: 1em;
-      border-radius: 6px;
-      transition: background 0.3s;
+    .textbox{
+      text-align:center;
+      padding:10px 10px;
+    }
+    .h2{
+      margin:0 0 16px 0;
+      font-size:22px;
+      font-weight:600;
+      color:#111;
+    }
+    .p{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.8;
     }
 
-    .btn:hover {
-      background-color: #e89cf5;
+    /* Footer (optional) */
+    footer{
+      padding:22px;
+      text-align:center;
+      color:#666;
+      border-top:1px solid rgba(0,0,0,.06);
+      font-size:14px;
     }
 
-    /* --- Images --- */
-    img {
-      max-width: 100%;
-      border-radius: 12px;
-      margin: 10px 0;
-    }
-
-    /* --- Sections --- */
-    section {
-      background-color: #fde8f9; 
-      padding: 40px 20px;
-      margin: 20px 0;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    /* --- Footer --- */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #f4cafb;
-      color: #4d2e4f;
-      border-top: 2px solid #b66bbf;
-      margin-top: 40px;
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .hero-left{ min-height:320px; }
+      .hero-title{ font-size:34px; }
+      .split{ grid-template-columns: 1fr; }
+      .split .imgbox img{ max-height:340px; }
+      .nav-right{ gap:12px; }
+      .icons{ display:none; } /* keep it clean on mobile */
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <h1>Juka Comfort</h1>
-      <p>Transform your Pilates workout with our shoulder block cushions</p>
-    </header>
 
-    <section>
-      <h2>Comfort & Support</h2>
-      <p>Our specially designed cushions relieve shoulder strain, making your workout safer and more enjoyable.</p>
-      <img src="https://via.placeholder.com/800x400.png?text=Shoulder+Block+Cushion" alt="Shoulder block cushion">
-      <button class="btn">Shop Now</button>
-    </section>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="brand">JUKA COMFORT</div>
 
-    <section>
-      <h2>Enhance Your Pilates Experience</h2>
-      <p>Whether you are a beginner or advanced, our cushions provide the stability you need to improve your form.</p>
-      <img src="https://via.placeholder.com/800x400.png?text=Pilates+Workout+with+Cushions" alt="Pilates workout">
-      <button class="btn">Learn More</button>
-    </section>
+      <div class="nav-right">
+        <a class="active" href="#home">HOME</a>
+        <a href="#shop">SHOP</a>
 
-    <footer>
-      &copy; 2025 Juka Comfort | Designed with care
-    </footer>
+        <!-- optional icons (search/cart/account) -->
+        <div class="icons" aria-hidden="true">
+          <span class="icon" title="Search">
+            <svg viewBox="0 0 24 24"><path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/></svg>
+          </span>
+          <span class="icon" title="Cart">
+            <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM6.2 6l.94 2h10.72l-1.35 6H8.1L5.16 4H2V2h4l.2 1h14.6v2H6.2z"/></svg>
+          </span>
+          <span class="icon" title="Account">
+            <svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 10-5-5 5 5 0 005 5zm0 2c-4.418 0-8 2.239-8 5v1h16v-1c0-2.761-3.582-5-8-5z"/></svg>
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <!-- HERO -->
+  <div id="home" class="hero">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <!-- Replace hero.jpg with your uploaded image filename -->
+        <img src="hero.jpg" alt="Pilates lifestyle image" />
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <h1 class="hero-title">Transform your<br/>workout with<br/>comfort</h1>
+          <p class="hero-sub">meet your new pilates essential</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MISSION -->
+  <div class="section">
+    <div class="split">
+      <div class="imgbox">
+        <!-- Replace mission.jpg with your uploaded image filename -->
+        <img src="mission.jpg" alt="Pilates reformers in studio" />
+      </div>
+
+      <div class="textbox">
+        <div class="h2">Our Mission</div>
+        <p class="p">
+          At Juka Comfort, we strive to enhance your Pilates experience with our specially designed shoulder block cushions.
+          We believe that comfort and support are essential for achieving optimal performance during your workouts.
+          <br/><br/>
+          Made from soft, durable materials, they’re built to support you through every session and every level of your practice.
+          And when the need arises, just toss them in the wash — they’re as low maintenance as they are comfortable.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- STORY -->
+  <div class="section" style="padding-top:0;">
+    <div class="split">
+      <div class="imgbox">
+        <!-- Replace story.jpg with your uploaded image filename -->
+        <img src="story.jpg" alt="Pilates class image" />
+      </div>
+
+      <div class="textbox">
+        <div class="h2">Our Story</div>
+        <p class="p">
+          We started JuKa Comfort out of necessity. The reformer shoulder blocks hurt my shoulders and kept me from focusing on my flow and core.
+          Even though the shoulder blocks on the reformer are padded, they are tough on shoulders when using heavy or even light springs!
+          Our shoulder block cushions are soft, durable, and functional. They slip on easily and improve comfort — increasing the value of your workout.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHOP placeholder anchor -->
+  <div id="shop"></div>
+
+  <footer>
+    © <span id="y"></span> Juka Comfort
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
