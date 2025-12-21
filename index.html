@@ -556,10 +556,7 @@
     min-height: 0 !important;
   }
 
-  .hero-left img{
-    position: static !important;
-    max-width: 100% !important;
-  }
+  
 
   .hero-grid{
     display: flex !important;
@@ -571,14 +568,22 @@
     width: 100% !important;
   }
 
-  .hero-left img{
-    display: block;
-    width: 100%;
-    height: auto;
+    .hero-left img{
+    position: static !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+
+    /* controls the height on mobile */
+    max-height: 240px !important;
+    object-fit: cover !important;
+    object-position: center !important;
   }
 
+  max-height: 240px !important;
+  object-fit: cover !important;
+  object-position: center !important;
 }
-</style>
 
 
 </body>
