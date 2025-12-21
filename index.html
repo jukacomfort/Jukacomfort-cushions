@@ -550,11 +550,26 @@
 </section>
 <style>
 @media (max-width: 768px) {
-  .hero-grid {
-    display: block;
+
+  .hero-grid{
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px;
   }
+
+  .hero-left{
+    width: 100% !important;
+  }
+
+  .hero-left img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
 }
 </style>
+
 
 </body>
 </html>
