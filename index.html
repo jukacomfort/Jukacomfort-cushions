@@ -329,7 +329,7 @@ svg.ig{
     <div class="split">
       <div class="imgbox">
         <!-- Replace mission.jpg with your uploaded image filename -->
-        <img src="cushions at esc.jpg" alt="Pilates reformers in studio" />
+        <img src="cushions at esc.jpg" alt="Pilates reformers in studio" class="mobile-spacer"> />
 
       </div>
 
@@ -747,6 +747,11 @@ align-items:center;
     text-align: center;
   }
 
+@media (max-width: 600px) {
+  .mobile-spacer {
+    margin-top: 20px; /* Adjust this number (20px) if you need more or less space */
+  }
+}
   
 }
 </style>
