@@ -206,15 +206,10 @@ svg.ig{
   .icons { display:flex; gap:10px; align-items:center; }
 
   .imgbox,
-  .textbox{
-    width:100%;
-    max-width:100%;
-    .imgbox{
-  position: static;
-  margin-top: 16px;
-}
-
-  }
+  .textbox {
+    width: 100%;
+    max-width: 100%;
+    display: block;
 
   .imgbox img{
     width:100%;
@@ -812,11 +807,18 @@ height: auto !important;
 
   
 }
+}
 </style>
-  <style>
-@media (max-width: 600px) {
+
+<style>
+@media (max-width: 900px) {
+  .split {
+    display: flex !important;
+    flex-direction: column !important;
+  }
   .mobile-spacer {
-    margin-top: 50px !important; 
+    margin-top: 40px !important; 
+    margin-bottom: 20px !important;
   }
 }
 </style>
