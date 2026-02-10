@@ -214,7 +214,7 @@ svg.ig{
     height:auto;
     display:block;
   }
-}
+
 
     }
 @media (max-width: 900px){
@@ -810,10 +810,19 @@ height: auto !important;
 
 <style>
 @media (max-width: 900px) {
+  /* This fixes the pink top section overlap */
+  .hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+  }
+  
+  /* This fixes the Mission section overlap */
   .split {
     display: flex !important;
     flex-direction: column !important;
   }
+  
   .mobile-spacer {
     margin-top: 40px !important; 
     margin-bottom: 20px !important;
